@@ -4,19 +4,7 @@
 	<title>Coming Soon 8</title>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-<!--===============================================================================================-->	
-	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="fonts/iconic/css/material-design-iconic-font.min.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
-<!--===============================================================================================-->
-	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
-<!--===============================================================================================-->
+
 	<link rel="stylesheet" type="text/css" href="css/util.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 <!--===============================================================================================-->
@@ -39,6 +27,7 @@
 <br>
 <br>
 <br>
+<br>
 			<h3 class="l1-txt1 txt-center p-b-22">
 				Coming Soon
 			</h3>
@@ -52,14 +41,14 @@
 				
 				<div class="flex-col-c-m size2 how-countdown">
 				<div class="flex-col-c-m wsize2 m-b-20">
-					<span class="l1-txt2 p-b-4 days">35</span>
+					<span class="l1-txt2 p-b-4 days">00</span>
 					<span class="m2-txt2">DAYS</span>
 				</div></div>
 
 				<!-- <span class="l1-txt2 p-b-22">:</span> -->
 				<div class="flex-col-c-m size2 how-countdown">
 				<div class="flex-col-c-m wsize2 m-b-20">
-					<span class="l1-txt2 p-b-4 hours">17</span>
+					<span class="l1-txt2 p-b-4 hours">00</span>
 					<span class="m2-txt2">HOURS</span>
 				</div>
 			</div>
@@ -69,7 +58,7 @@
 				
 
 				<div class="flex-col-c-m wsize2 m-b-20">
-					<span class="l1-txt2 p-b-4 minutes">50</span>
+					<span class="l1-txt2 p-b-4 minutes">00</span>
 					<span class="m2-txt2">MINUTES</span>
 				</div></div>
 
@@ -77,21 +66,11 @@
 				<div class="flex-col-c-m size2 how-countdown">
 
 				<div class="flex-col-c-m wsize2 m-b-20">
-					<span class="l1-txt2 p-b-4 seconds">39</span>
+					<span class="l1-txt2 p-b-4 seconds">00</span>
 					<span class="m2-txt2">SECONDS</span>
 				</div></div>
 			</div>
 
-			<!-- <form class="flex-w flex-c-m contact100-form validate-form p-t-70">
-				<div class="wrap-input100 validate-input where1" data-validate = "Email is required: ex@abc.xyz">
-					<input class="s1-txt1 placeholder0 input100" type="text" name="email" placeholder="Email Address">
-					<span class="focus-input100"></span>
-				</div>
-
-				<button class="flex-c-m s1-txt1 size2 how-btn trans-04 where1">
-					Notify Me
-				</button>
-			</form>			 -->
 		</div>
 	</div>
 
@@ -99,42 +78,44 @@
 
 	
 
-<!--===============================================================================================-->	
-	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
-<!--===============================================================================================-->
-	<script src="vendor/bootstrap/js/popper.js"></script>
-	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-<!--===============================================================================================-->
-	<script src="vendor/select2/select2.min.js"></script>
-<!--===============================================================================================-->
-	<script src="vendor/countdowntime/moment.min.js"></script>
-	<script src="vendor/countdowntime/moment-timezone.min.js"></script>
-	<script src="vendor/countdowntime/moment-timezone-with-data.min.js"></script>
-	<script src="vendor/countdowntime/countdowntime.js"></script>
+
 	<script>
-		$('.cd100').countdown100({
-			/*Set Endtime here*/
-			/*Endtime must be > current time*/
-			endtimeYear: 2024,
-			endtimeMonth: 0,
-			endtimeDate: 25,
-			endtimeHours: 9,
-			endtimeMinutes: 0,
-			endtimeSeconds: 0,
-			timeZone: "" 
-			// ex:  timeZone: "America/New_York"
-			//go to " http://momentjs.com/timezone/ " to get timezone
-		});
+		// Set the date we're counting down to (replace this with your desired end date and time)
+		var countDownDate = new Date("Jan 25, 2024 15:37:25").getTime();
+	
+		// Update the countdown every 1 second
+		var countdownInterval = setInterval(function() {
+			// Get the current date and time
+			var now = new Date().getTime();
+	
+			// Calculate the remaining time
+			var distance = countDownDate - now;
+	
+			// Calculate days, hours, minutes, and seconds
+			var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+			var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+			var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+			var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+	
+			// Add leading zeros if needed
+			days = (days < 10) ? '0' + days : days;
+			hours = (hours < 10) ? '0' + hours : hours;
+			minutes = (minutes < 10) ? '0' + minutes : minutes;
+			seconds = (seconds < 10) ? '0' + seconds : seconds;
+	
+			// Display the countdown in the elements with corresponding classes
+			document.querySelector(".days").innerHTML = days  ;
+			document.querySelector(".hours").innerHTML = hours ;
+			document.querySelector(".minutes").innerHTML = minutes ;
+			document.querySelector(".seconds").innerHTML = seconds ;
+	
+			// If the countdown is over, display a message
+			if (distance < 0) {
+				clearInterval(countdownInterval);
+				document.querySelector(".Group1Text").innerHTML = "EXPIRED";
+			}
+		}, 1000);
 	</script>
-<!--===============================================================================================-->
-	<script src="vendor/tilt/tilt.jquery.min.js"></script>
-	<script >
-		$('.js-tilt').tilt({
-			scale: 1.1
-		})
-	</script>
-<!--===============================================================================================-->
-	<script src="js/main.js"></script>
 
 </body>
 </html>
