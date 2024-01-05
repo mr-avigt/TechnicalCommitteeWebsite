@@ -236,11 +236,13 @@ input.input100 {
 /*//////////////////////////////////////////////////////////////////
 [ L-Text >= 26 ]*/
 .l1-txt1 {
-  font-family: Poppins-Bold;
+  font-family: '1';
   font-size: 48px;
   color: #fff;
   line-height: 1.2;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
+  font-weight: bold;
+  
   
 }
 
@@ -577,6 +579,11 @@ word-wrap: break-word
 	display: flex;
 	
 } */
+
+@font-face {
+	font-family: '1';
+	src: url(../fonts/CinzelDecorative-Regular.ttf);
+  }
 
   
   
