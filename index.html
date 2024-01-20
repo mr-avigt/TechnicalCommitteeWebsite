@@ -477,7 +477,7 @@
                 <div class="main">
                     <div class="content">
                         <h2>Contact Us</h2>
-                        <form action="#" method="post">
+                        <form onsubmit="sendEmail(event)">
                             <input type="text" name="name" placeholder="Enter Your Name">
 
                             <input type="email" name="name" placeholder="Enter Your Email">
@@ -534,6 +534,33 @@
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <!-- <script src="script.js"></script> -->
     <script src="script.js"></script>
+	<script src=" https://smtpjs.com/v3/smtp.js"></script>
+	<script>
+        function sendEmail(event) {
+            event.preventDefault(); // Prevents the form from submitting in the traditional way
+
+            var name = document.getElementById("name").value;
+            var email = document.getElementById("email").value;
+            var message = document.getElementById("message").value;
+
+            // Use the Email.send function to send the email
+            Email.send({
+                SecureToken: "ee937cb5-4563-4b33-b25c-324f1f55105e", // You should replace this with your own secure token from smtpjs.com
+                To: 'kartikayverma53@gmail.com',
+                From: "kartikayverma57@gmail.com",
+                Subject: "Contact Form Submission from " + name,
+                Body: "Name: " + name + "<br>Email: " + email + "<br>Message: " + message
+            }).then(
+                function (message) {
+                    if (message === "OK") {
+                        alert("Email sent successfully");
+                    } else {
+                        alert("Email failed to send");
+                    }
+                }
+            );
+        }
+    </script>
 
 </body>
 
