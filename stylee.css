@@ -124,11 +124,9 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    scale: 1.3;
+    scale: 1.1;
     z-index: 3;
-    /* animation: bounce 10s infinite ease-in-out; */
-    /* margin-right: -12vw;
-    margin-top: -20vh; */
+    
   }
   
   #circle,#drstrange,#ultron,#halfcircle{
@@ -1571,24 +1569,7 @@ body {
             border-radius: 10px;
             overflow: hidden;
           }
-          /* .cardss{
-            width: 15vw;
-            scale: 1.2;
-            position: relative;
-            margin-bottom: 20px;
-            margin-left: 1vw;
-            border-radius: 10px;
-            overflow: hidden;
-          }
           
-          .cardss img{
-          
-            height: 100%;
-            width: 100%;
-            filter: grayscale(100%);
-            box-shadow: 0 0 20px #333;
-            object-fit: cover;
-          } */
           .hill-pizza{
             display: flex;
             flex-wrap: wrap;
@@ -1600,7 +1581,7 @@ body {
           
             height: 100%;
             width: 100%;
-            filter: grayscale(100%);
+            
             box-shadow: 0 0 20px #333;
             object-fit: cover;
           }
@@ -1989,3 +1970,29 @@ body {
             min-height: 100vh;
             background: black;
 		  }
+		  #fun1{
+			background: url(dirtrace.png);
+			background-size: cover;
+			
+		
+		}
+		#fun2{
+			background: url(flipthebottle.png);
+			background-size: cover;
+		
+		}
+		#fun3{
+			background: url(aquaquest.png);
+			background-size: cover;
+		
+		}
+		#fun4{
+			background: url(ballandfizz.png);
+			background-size: cover;
+		
+		}
+		#fun5{
+			background: url(frubiks.png);
+			background-size: cover;
+		
+		} 
