@@ -1053,7 +1053,7 @@ body {
     background-size: cover;
   }
   .card:nth-child(9) .card__face--front{
-    background: url(PortfolioExpo.png);
+    background: url(portfolioExpo.png);
     background-size: cover;
   }
   
@@ -1913,7 +1913,8 @@ body {
 		  }
 		  .fcarousel .fcard {
 			scroll-snap-align: start;
-			height: 342px;
+			height: 300px;
+			width: 200px;
 			list-style: none;
 			background: white;
 			cursor: pointer;
@@ -1923,10 +1924,10 @@ body {
 			
 		  }
 		  .fcarousel .fcard .fimg {
-			background: #8B53FF;
+			/* background: #8B53FF;
 			height: 148px;
 			width: 148px;
-			border-radius: 50%;
+			border-radius: 50%; */
 		  }
 		  .fcard .fimg img {
 			width: 140px;
@@ -1971,3 +1972,30 @@ body {
             min-height: 100vh;
             background: black;
 		  }
+
+#fun1{
+	background: url(dirtrace.png);
+	background-size: cover;
+	
+
+}
+#fun2{
+	background: url(flipthebottle.png);
+	background-size: cover;
+
+}
+#fun3{
+	background: url(aquaquest.png);
+	background-size: cover;
+
+}
+#fun4{
+	background: url(ballandfizz.png);
+	background-size: cover;
+
+}
+#fun5{
+	background: url(frubiks.png);
+	background-size: cover;
+
+}
