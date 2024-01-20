@@ -1999,3 +1999,20 @@ body {
 	background-size: cover;
 
 }
+.cardss{
+            width: 20vw;
+            position: relative;
+            margin-bottom: 20px;
+            margin-left: 1vw;
+            border-radius: 10px;
+            overflow: hidden;
+          }
+          
+          .cardss img{
+          
+            height: 100%;
+            width: 100%;
+            filter: grayscale(0%);
+            box-shadow: 0 0 20px #333;
+            object-fit: cover;
+          }
