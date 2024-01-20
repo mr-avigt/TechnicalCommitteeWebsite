@@ -1840,7 +1840,7 @@ body {
           }
           
 
-
+ 
 		  /* funevents */
 		  .fwrapper {
 			max-width: 1100px;
@@ -1912,7 +1912,8 @@ body {
 		  }
 		  .fcarousel .fcard {
 			scroll-snap-align: start;
-			height: 342px;
+			height: 300px;
+			width: 200px;
 			list-style: none;
 			background: white;
 			cursor: pointer;
@@ -1922,10 +1923,10 @@ body {
 			
 		  }
 		  .fcarousel .fcard .fimg {
-			background: #8B53FF;
+			/* background: #8B53FF;
 			height: 148px;
 			width: 148px;
-			border-radius: 50%;
+			border-radius: 50%; */
 		  }
 		  .fcard .fimg img {
 			width: 140px;
