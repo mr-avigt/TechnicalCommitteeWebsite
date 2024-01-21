@@ -16,6 +16,12 @@
 
 // skip
 
+//preloader
+window.addEventListener('load', function () {
+    const loader = document.querySelector('.preloader');
+    loader.classList.add('hide');
+});
+
 
 
 const cardBunch = document.querySelectorAll(".card__inner");
